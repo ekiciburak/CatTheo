@@ -24,5 +24,6 @@ IndexedCategories.v
 ComparisonK.v
 EilenbergMoore.v
 ComparisonEM.v
+MonadicFunctor.v
 
 -Q . Cat

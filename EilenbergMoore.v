@@ -193,5 +193,8 @@ Proof. intros.
        - intro a. cbn.
          destruct a, t. now cbn in *.
 Defined.
-
+ 
+ 
+ 
+ 
 

@@ -53,6 +53,7 @@ Proof. intros.
          now rewrite preserve_comp.
 Defined.
 
+
 Lemma commKT: ∏ {C D: Category} (F: Functor C D) (G: Functor D C) (A: Adjunction F G),
                let M   := (adj_mon F G A) in
                let EMC := (EilenbergMooreCategory M) in

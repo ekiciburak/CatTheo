@@ -140,6 +140,13 @@ Class CatEquivalence (C D: Category): Type :=
    eq_obr  : @Isomorphic (FunctorCategory D D) (Compose_Functors rfunctor lfunctor) (@IdFunctor D)
 }.
 
+Class CatEquivalenceA (C D: Category) (lfunctorA: Functor C D): Type :=
+{
+   rfunctorA: Functor D C;
+   eq_oblA  : @Isomorphic (FunctorCategory C C) (Compose_Functors lfunctorA rfunctorA) (@IdFunctor C);
+   eq_obrA  : @Isomorphic (FunctorCategory D D) (Compose_Functors rfunctorA lfunctorA) (@IdFunctor D)
+}.
+
 Definition appFunctor (C D: Category): Functor ((ProductCategory (FunctorCategory C D) C)) D.
 Proof. unshelve econstructor.
        - intros (F, X).
